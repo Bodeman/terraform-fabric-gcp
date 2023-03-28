@@ -16,5 +16,5 @@
 
 variable "location" {
   type    = string
-  default = "EU"
+  default = "US"
 }

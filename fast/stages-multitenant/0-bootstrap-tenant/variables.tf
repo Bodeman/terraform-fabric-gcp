@@ -157,8 +157,8 @@ variable "locations" {
     pubsub  = list(string)
   })
   default = {
-    bq      = "EU"
-    gcs     = "EU"
+    bq      = "US"
+    gcs     = "US"
     logging = "global"
     pubsub  = []
   }

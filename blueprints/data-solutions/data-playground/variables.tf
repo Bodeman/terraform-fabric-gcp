@@ -16,7 +16,7 @@
 variable "location" {
   description = "The location where resources will be deployed."
   type        = string
-  default     = "EU"
+  default     = "US"
 }
 
 variable "network_config" {

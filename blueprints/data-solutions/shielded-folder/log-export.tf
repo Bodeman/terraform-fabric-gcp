@@ -72,7 +72,7 @@ module "log-export-dataset" {
   project_id     = module.log-export-project[0].project_id
   id             = "${var.prefix}_audit_export"
   friendly_name  = "Audit logs export."
-  location       = replace(var.log_locations.bq, "europe", "EU")
+  location       = replace(var.log_locations.bq, "united states", "US")
   encryption_key = var.enable_features.encryption ? module.log-kms[var.log_locations.bq].keys["bq"].id : false
 }
 
@@ -82,7 +82,7 @@ module "log-export-gcs" {
   project_id     = module.log-export-project[0].project_id
   name           = "audit-logs"
   prefix         = var.prefix
-  location       = replace(var.log_locations.storage, "europe", "EU")
+  location       = replace(var.log_locations.storage, "united states", "US")
   storage_class  = local.gcs_storage_class
   encryption_key = var.enable_features.encryption ? module.log-kms[var.log_locations.storage].keys["storage"].id : null
 }
